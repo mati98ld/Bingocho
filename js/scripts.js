@@ -2,7 +2,6 @@ const $logo = document.querySelector("#logo");
 
 const playerName = document.querySelector("#playerName");
 
-
 let contador = 0;
 
 $logo.addEventListener("pointerdown", animar);
@@ -34,16 +33,3 @@ const game = new Game();
 Settings.setup(game);
 Sounds.setup(game);
 InitialScreen.init(game);
-
-const socket = io();
-socket.on("hola", function (data) {
-  alert("Hola, desde el server " + data);
-});
-
-socket.on("newNumberFromBingoCaller", function (numero) {
- // alert("Se cantó " + numero);
-});
-
-socket.on("mentiroso", function(nombreMentiroso){
-  alert(nombreMentiroso + " es un mentiroso, no hizo bingocho")
-})

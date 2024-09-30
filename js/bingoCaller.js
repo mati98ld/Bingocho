@@ -28,7 +28,6 @@ const BingoCaller = (function () {
       $numberBallWrapper.innerHTML = newNumberBall;
       $numbersContainer.innerHTML += newNumberBall;
       $numbersContainer.scrollTop = $numbersContainer.scrollHeight;
-      socket.emit("newNumber", randomNumber);
     }
   }
 

@@ -94,7 +94,6 @@ const Carton = (function () {
       } else if (bingocho == 3) {
         Sounds.play("win");
         Aviso.Bingo();
-        socket.emit("bingo");
       }
     } else if (getMarkedCellsOnLine(event.target) < 5) {
       currentRow.classList.remove("linea");
@@ -154,11 +153,6 @@ const Carton = (function () {
         addNumberToCarton(cellNumber, row);
       }
     }
-
-    socket.emit("newCarton", {
-      name: playerName.value,
-      carton: numerosCarton,
-    });
   };
 
   Carton.prototype.reset = function () {

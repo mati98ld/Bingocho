@@ -9,7 +9,6 @@ const InitialScreen = {
       Game.setGameMode(
         isBingoCaller ? Game.MODE.BINGO_CALLER : Game.MODE.PLAYER
       );
-      socket.emit("joinGame", playerName.value);
       Game.start();
 
       let logo = document.querySelector("#logo");
